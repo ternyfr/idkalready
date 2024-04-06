@@ -27,6 +27,30 @@
 #         break
 
 # pi = 3
+
+a = ""
+wishlist = []
+while a != "0":
+    a = input("\nчто хочешь записать? 0 - выйход из программы\n")
+    if a != "0":
+        wishlist.append(a)
+print("добавлено в корзину:")
+
+def spisok():
+    i = 0
+    n = 1
+    while i < len(wishlist):
+        print(f"{n}. {wishlist[i]}")
+        i += 1
+        n += 1
+
+spisok()
+b = ""
+while b != 0:
+    b = input("\nесли хочешь удалить элемент из списка, введи его номер. 0 - конец программы\n")
+    if b != 0:
+        wishlist.pop(b-1)
+    spisok()
 # a = 2
 # for i in range(1, 16):
 #     if i % 2 == 0:
